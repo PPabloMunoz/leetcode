@@ -1,15 +1,3 @@
-function getTreeHeightBounds(numberOfNodes) {
-	if (numberOfNodes <= 0) return { min: 0, max: 0 };
-
-	// Minimum height (perfect binary tree)
-	const minHeight = Math.floor(Math.log2(numberOfNodes + 1));
-
-	// Maximum height (completely unbalanced tree)
-	const maxHeight = numberOfNodes - 1;
-
-	return { min: minHeight, max: maxHeight };
-}
-
 /**
  * Definition for _Node.
  * class _Node {

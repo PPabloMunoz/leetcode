@@ -1,3 +1,3 @@
 # Leetcode problems
 
-## Solved with TS/JS
+## Solved with TS

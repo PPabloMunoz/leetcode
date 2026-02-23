@@ -1,6 +1,14 @@
+executable := "./main"
 
 build:
-  go build -o main .
+  go build -o {{executable}} .
 
 run: build
-  ./main
+  {{executable}}
+
+save NUMBER:
+  cp ./main.go ./exercises/{{NUMBER}}.go
+
+new:
+  @cp ./main.go save_bck
+  cp ./template ./main.go

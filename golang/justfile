@@ -6,9 +6,14 @@ build:
 run: build
   {{executable}}
 
-save NUMBER:
-  cp ./main.go ./exercises/{{NUMBER}}.go
+save NUM:
+  cp ./main.go ./exercises/{{NUM}}.go
 
 new:
-  @cp ./main.go save_bck
+  cp ./main.go save_bck
+  cp ./template ./main.go
+
+finish NUM:
+  cp ./main.go ./exercises/{{NUM}}.go
+  cp ./main.go save_bck
   cp ./template ./main.go

@@ -1,4 +1,4 @@
-executable := "./main"
+executable := "./exercise"
 
 build:
   go build -o {{executable}} .

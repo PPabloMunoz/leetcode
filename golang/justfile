@@ -22,3 +22,4 @@ finish NUM:
   cp ./main.go ./exercises/{{NUM}}.go
   cp ./main.go save_bck
   cp ./template ./main.go
+  cp ./template_test ./main_test.go

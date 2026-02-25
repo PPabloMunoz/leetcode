@@ -1,0 +1,24 @@
+executable := "./exercise"
+
+default: test
+
+build:
+  clang main.c -o {{executable}}
+
+run: build
+  {{executable}}
+
+test: build
+  ./{{executable}}
+
+save NUM:
+  cp ./main.c ./exercises/{{NUM}}.c
+
+new:
+  cp ./main.c save_bck
+  cp ./template ./main.c
+
+finish NUM:
+  cp ./main.c ./exercises/{{NUM}}.c
+  cp ./main.c save_bck
+  cp ./template ./main.c
